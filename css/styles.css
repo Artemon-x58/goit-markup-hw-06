@@ -139,7 +139,7 @@ body {
 	transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 	padding: 24px;
-	min-width: 408px;
+	width: 408px;
 	min-height: 576px;
 
 	border-radius: 4px;
@@ -152,6 +152,7 @@ body {
 	width: 24px;
 	height: 24px;
 	margin-left: auto;
+	margin-bottom: 24px;
 
 	cursor: pointer;
 	background: var(--background-btn);
@@ -168,6 +169,151 @@ body {
 .modal-icon-closed {
 	fill: currentColor;
 }
+.modal-text {
+	margin-bottom: 16px;
+
+	text-align: center;
+
+	color: var(--main-title-color);
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 1.5;
+	letter-spacing: 0.02em;
+}
+.modal-form {
+}
+.form-group {
+	margin-bottom: 8px;
+	position: relative;
+}
+.form-group-checkbox {
+	margin-top: 16px;
+	margin-bottom: 24px;
+}
+.label-modal-form > span {
+	font-size: 12px;
+	line-height: 1.17;
+	letter-spacing: 0.04em;
+	color: #8e8f99;
+}
+.input-form {
+	transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+	display: block;
+	padding: 11px 38px;
+	width: 360px;
+	height: 40px;
+	margin-top: 4px;
+
+	outline: none;
+	color: var(--main-title-color);
+	opacity: 0.2;
+	border: 1px solid var(--secondary-title-color);
+	border-radius: 4px;
+}
+.input-form:focus {
+	border: 1px solid var(--secondary-accent-color);
+	opacity: 1;
+}
+.input-form:focus + .modal-form-icon {
+	fill: var(--secondary-accent-color);
+}
+.input-form:not(:placeholder-shown) {
+	color: var(--main-title-color);
+	border: 1px solid var(--secondary-accent-color);
+	border-radius: 4px;
+	opacity: 1;
+}
+.modal-form-icon {
+	transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+	position: absolute;
+	left: 16px;
+	bottom: 8px;
+}
+.privacy-policy {
+	color: var(--secondary-accent-color);
+	text-decoration: underline;
+}
+textarea {
+	resize: none;
+}
+textarea::placeholder {
+	font-size: 12px;
+	line-height: 1.17;
+	letter-spacing: 0.04em;
+	color: rgba(46, 47, 66, 0.4);
+}
+
+.modal-span-checkbox {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	width: 16px;
+	height: 16px;
+	border: 1px solid var(--secondary-title-color);
+	border-radius: 2px;
+}
+.modal-label-name {
+}
+.modal-input-name {
+}
+.modal-label-phone {
+}
+.modal-input-phone {
+}
+.modal-label-email {
+}
+.modal-input-email {
+}
+.modal-label-textarea {
+}
+.modal-textarea {
+	padding: 8px 16px;
+}
+.modal-label-checkbox {
+	position: relative;
+
+	padding-left: 24px;
+	font-size: 12px;
+	line-height: 1.17;
+	letter-spacing: 0.04em;
+	color: var(--icons-color);
+}
+.modal-input-checkbox:checked + .modal-span-checkbox {
+	background-color: var(--main-accent-color);
+	border: none;
+}
+.modal-checkbox-icon {
+	fill: var(--btn-hover-focus);
+}
+.modal-textarea {
+	width: 360px;
+	height: 120px;
+}
+.modal-send-btn {
+	transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+	display: block;
+	margin: 0 auto;
+	min-width: 169px;
+	padding: 16px 32px;
+
+	background-color: var(--secondary-accent-color);
+	border: none;
+	color: var(--btn-hover-focus);
+	border-radius: 4px;
+}
+.modal-send-btn:hover,
+.modal-send-btn:focus {
+	background-color: var(--main-accent-color);
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+
 /* ----------------------------------------------------------------Studio---------------------------------------------------------------- */
 
 /* ----------------------------Header--------------------------- */
@@ -279,6 +425,7 @@ body {
 	padding: 16px 42px;
 	border-radius: 4px;
 	border-color: var(--secondary-accent-color);
+	border: none;
 
 	color: var(--main-color-hero);
 	background-color: var(--secondary-accent-color);
@@ -532,6 +679,59 @@ body {
 }
 .footer-social-media {
 	margin-left: 120px;
+}
+.footer-form {
+	position: relative;
+
+	display: flex;
+	align-items: end;
+	margin-left: 80px;
+	height: 80px;
+}
+.footer-label {
+	position: absolute;
+	top: 0;
+	left: 0;
+
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 1.5;
+	letter-spacing: 0.02em;
+	color: var(--main-color-hero);
+}
+.footer-input {
+	margin-right: 24px;
+	height: 40px;
+	min-width: 264px;
+	padding: 8px 16px;
+
+	color: var(--btn-hover-focus);
+	background-color: var(--background-color-gray);
+	border: 1px solid #ffffff;
+	border-radius: 4px;
+}
+.footer-form-btn {
+	transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+	display: flex;
+	margin-left: auto;
+	padding: 8px 24px;
+	min-width: 165px;
+	border-radius: 4px;
+	text-align: center;
+	border: none;
+
+	color: var(--btn-hover-focus);
+	background-color: var(--secondary-accent-color);
+}
+.footer-form-btn:hover,
+.footer-form-btn:focus {
+	background-color: var(--main-accent-color);
+}
+.footer-form-icon {
+	margin-left: 16px;
+
+	fill: var(--btn-hover-focus);
 }
 /* ----------------------------------------------------------------/Studio---------------------------------------------------------------- */
 
